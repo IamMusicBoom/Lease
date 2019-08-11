@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<data>
+    <variable
+        name="model"
+        type="com.tylx.leasephone.model.CommentModel"/>
+    <import type="com.tylx.leasephone.R"/>
+    <import type="android.text.TextUtils"/>
+    <import type="com.tylx.leasephone.util.ProbjectUtil"/>
+</data>
+
+<LinearLayout
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/dp_10"
+        android:orientation="horizontal">
+        <com.tylx.leasephone.view.RoundImageView
+            android:id="@+id/me_user_head_img"
+            android:layout_width="@dimen/dp_50"
+            android:layout_height="@dimen/dp_50"
+            android:src="@mipmap/default_face"
+            app:loadImage="@{model.memberAccInfo.headImg}"
+            app:defaultImg="@{R.mipmap.default_face}"
+            app:rstyle="ARC"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:text="@{TextUtils.isEmpty(model.memberAccInfo.nickName)? ProbjectUtil.setMidHide(model.memberAccInfo.mobilePhone):model.memberAccInfo.nickName}"/>
+            <android.support.v7.widget.AppCompatRatingBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ratingBar1"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:stepSize="1"
+                android:isIndicator="true"
+                android:rating="@{model.grade}"
+                android:theme="@style/RatingBar"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                style="?attr/ratingBarStyleSmall"
+                android:layout_marginTop="10dip"
+                android:progressTint="@color/progress_tint_color"
+                android:progressBackgroundTint="@color/progress_background_tint"
+                android:secondaryProgressTint="@color/secondary_progress_tint"/>
+        </LinearLayout>
+
+    </LinearLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dp_10"
+
+        android:layout_marginRight="@dimen/dp_10"
+        android:text="@{model.content}"/>
+</LinearLayout>
+</LinearLayout>
+</layout>

@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="isEdit"
+            type="java.lang.Boolean"/>
+        <variable
+            name="isSelectAll"
+            type="java.lang.Boolean"/>
+        <import type="android.view.View"/>
+        <import type="com.tylx.leasephone.model.GoodsModel"/>
+        <import type="com.tylx.leasephone.R"/>
+        <variable
+            name="model"
+            type="com.tylx.leasephone.model.ShoppingGoodsModel"/>
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <LinearLayout
+            android:orientation="vertical" android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_5"
+            android:visibility="@{isEdit?View.GONE:View.VISIBLE}"
+            >
+            <com.mcxtzhang.swipemenulib.SwipeMenuLayout
+                android:id="@+id/m_sml_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            >
+                        </LinearLayout>
+                        <android.support.v7.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="true"
+                            android:clickable="true"
+                            app:cardBackgroundColor="@color/white"
+                            android:layout_margin="@dimen/dp_5"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            app:cardElevation="@dimen/dp_3"
+                            >
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@color/white"
+                                android:gravity="center_vertical"
+                                android:orientation="horizontal">
+
+                                <CheckBox
+                                    android:id="@+id/shopping_cb"
+                                    android:layout_width="@dimen/dp_20"
+                                    android:layout_height="@dimen/dp_20"
+                                    android:layout_margin="@dimen/dp_10"
+                                    android:background="@drawable/shopping_checkbox"
+                                    android:button="@null"
+                                    android:checked="@{isSelectAll,default=false}" />
+
+                                <ImageView
+                                    android:layout_width="@dimen/dp_90"
+                                    android:layout_height="@dimen/dp_90" />
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/dp_15"
+                                    android:layout_marginRight="@dimen/dp_10"
+                                    android:layout_weight="1"
+                                    android:gravity="center_vertical"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/shopping_name"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="@dimen/dp_10"
+                                        android:text="@{model.commondityInfoVo.name}"
+                                        android:textColor="@color/black_222833"
+                                        android:textSize="@dimen/font_15" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center_vertical"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:id="@+id/shopping_parameter"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textColor="@color/color_999999"
+                                            android:textSize="@dimen/font_8" />
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:id="@+id/shopping_money"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:text="现售价249/副" />
+
+                                        <TextView
+                                            android:id="@+id/shopping_num"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="@{model.commodityNum+`件`}"
+                                            android:textColor="@color/color_999999"
+                                            android:textSize="@dimen/font_11" />
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/shopping_img"
+                        android:layout_width="@dimen/dp_90"
+                        android:layout_height="@dimen/dp_90"
+                        android:background="@color/white"
+                        android:src="@mipmap/nofile"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="45dp"
+                        android:layout_marginTop="20dp"
+                        app:loadImage="@{model.commondityInfoVo.listPic}"
+                        app:defaultImg="@{R.mipmap.nofile}"
+                        />
+                </RelativeLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_40">
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/shopping_delete"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/delete_selector"
+                        android:gravity="center"
+                        android:paddingLeft="@dimen/dp_15"
+                        android:paddingRight="@dimen/dp_15"
+                        android:text="删除"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:layout_marginBottom="@dimen/dp_5"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+            </com.mcxtzhang.swipemenulib.SwipeMenuLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical" android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/dp_5"
+            android:visibility="@{isEdit?View.VISIBLE:View.GONE,default=gone}"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+
+                        >
+                    </LinearLayout>
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusable="true"
+                        android:clickable="true"
+                        app:cardBackgroundColor="@color/white"
+                        android:layout_margin="@dimen/dp_5"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        app:cardElevation="@dimen/dp_3">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:background="@color/white"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="@dimen/dp_90"
+                                android:layout_height="@dimen/dp_90" />
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1">
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center_vertical"
+                                    android:layout_marginLeft="@dimen/dp_25"
+                                    android:orientation="vertical">
+                                    <LinearLayout
+                                        android:id="@+id/paramter_layout"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center_vertical"
+                                        android:paddingBottom="@dimen/dp_5"
+                                        android:background="@drawable/white_onclick_shape"
+                                        android:orientation="horizontal">
+                                        <TextView
+                                            android:id="@+id/shopping_eidt_parameter"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textColor="@color/color_999999"
+                                            android:textSize="@dimen/font_10"/>
+                                        <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:padding="@dimen/dp_10"
+                                            android:src="@mipmap/chart_more"/>
+                                    </LinearLayout>
+                                    <ImageView
+                                        style="@style/horizontal_line"
+                                        />
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center_vertical"
+                                        android:orientation="horizontal">
+                                        <ImageView
+                                            android:id="@+id/shopping_sub_btn"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:src="@mipmap/goods_sub_btn"
+                                            android:background="@drawable/white_onclick_shape"
+                                            android:padding="@dimen/dp_10"/>
+                                        <TextView
+                                            android:id="@+id/shopping_edit_num"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="@{model.commodityNum+``}"
+                                            android:padding="@dimen/dp_10"/>
+                                        <ImageView
+                                            android:id="@+id/shopping_add_btn"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:src="@mipmap/goods_add_btn"
+                                            android:background="@drawable/white_onclick_shape"
+                                            android:padding="@dimen/dp_10"/>
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </LinearLayout>
+                            <TextView
+                                android:id="@+id/shopping_edit_delete"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/delete_selector"
+                                android:gravity="center"
+                                android:paddingLeft="@dimen/dp_15"
+                                android:paddingRight="@dimen/dp_15"
+                                android:text="删除"
+                                android:textColor="@color/white" />
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+
+                </LinearLayout>
+                <ImageView
+                    android:id="@+id/shopping_edit_img"
+                    android:layout_width="@dimen/dp_90"
+                    android:layout_height="@dimen/dp_90"
+                    android:background="@color/white"
+                    android:src="@mipmap/nofile"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="@dimen/dp_15"
+                    app:loadImage="@{model.commondityInfoVo.listPic}"
+                    app:defaultImg="@{R.mipmap.nofile}"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

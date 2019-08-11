@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:id="@+id/linear_sub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:padding="@dimen/normal_padding"
+            >
+            <ImageView
+                android:id="@+id/sub_btn_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/goods_sub_btn"
+                />
+        </LinearLayout>
+        <EditText
+            android:id="@+id/num_text_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="@color/gray_232323"
+            android:inputType="number"
+            android:background="@null"
+            android:text="0"
+            android:textSize="@dimen/font_13" />
+
+        <LinearLayout
+            android:id="@+id/linear_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/normal_padding"
+            >
+            <ImageView
+                android:id="@+id/add_btn_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/goods_add_btn"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

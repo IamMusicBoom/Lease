@@ -1,0 +1,61 @@
+10
+
+dir
+527
+svn://192.168.0.122/Lease/APP/Android/Lease/multi-image-selector/src/main/res
+svn://192.168.0.122/Lease
+
+
+
+2017-07-26T01:32:54.770674Z
+527
+wma
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+e32f6f84-27a2-4b6c-9872-e2a00f578833
+
+color
+dir
+
+drawable
+dir
+
+drawable-xhdpi
+dir
+
+drawable-xxhdpi
+dir
+
+layout
+dir
+
+layout-v14
+dir
+
+values
+dir
+
+values-sw360dp
+dir
+
+values-sw480dp
+dir
+
+values-sw720dp
+dir
+
+values-zh
+dir
+

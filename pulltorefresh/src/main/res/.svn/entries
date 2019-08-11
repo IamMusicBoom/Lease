@@ -1,0 +1,103 @@
+10
+
+dir
+527
+svn://192.168.0.122/Lease/APP/Android/Lease/pulltorefresh/src/main/res
+svn://192.168.0.122/Lease
+
+
+
+2017-07-26T01:32:54.770674Z
+527
+wma
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+e32f6f84-27a2-4b6c-9872-e2a00f578833
+
+anim
+dir
+
+drawable
+dir
+
+drawable-hdpi
+dir
+
+drawable-mdpi
+dir
+
+drawable-xhdpi
+dir
+
+layout
+dir
+
+values
+dir
+
+values-ar
+dir
+
+values-cs
+dir
+
+values-de
+dir
+
+values-es
+dir
+
+values-fi
+dir
+
+values-fr
+dir
+
+values-he
+dir
+
+values-it
+dir
+
+values-iw
+dir
+
+values-ja
+dir
+
+values-ko
+dir
+
+values-nl
+dir
+
+values-pl
+dir
+
+values-pt
+dir
+
+values-pt-rBR
+dir
+
+values-ro
+dir
+
+values-ru
+dir
+
+values-zh
+dir
+

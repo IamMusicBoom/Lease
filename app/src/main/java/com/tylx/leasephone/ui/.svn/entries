@@ -1,0 +1,74 @@
+10
+
+dir
+1056
+svn://192.168.0.122/Lease/APP/Android/Lease/app/src/main/java/com/tylx/leasephone/ui
+svn://192.168.0.122/Lease
+
+
+
+2017-08-17T04:28:21.896804Z
+1050
+wma
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+e32f6f84-27a2-4b6c-9872-e2a00f578833
+
+LoadUrlActivity.java
+file
+
+
+
+
+2017-08-14T02:06:25.880000Z
+274c0513a9e0d3754791fa7f484f390e
+2017-08-14T02:19:49.806583Z
+986
+wma
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+2401
+
+activity
+dir
+
+broadcastreceiver
+dir
+
+fragment
+dir
+
+welcome
+dir
+

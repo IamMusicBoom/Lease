@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tylx.leasephone">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.SET_DEBUG_APP" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:name=".system.AppContext"
+        android:allowBackup="true"
+        android:icon="@mipmap/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="bfe47fb2f18f54d871ba5a130d4e9104" />
+
+        <activity android:name=".ui.welcome.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.welcome.WelcomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.me.MeActrivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.me.CommonPproblemActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.me.AddressActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.me.CommentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.me.MoreSettingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.login.LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.login.RegisteActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.HomeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".zoom.ImagePagerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.lease_shop.ClassificationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.me.CustomerServiceActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.me.AuthenticationStuActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.lease_shop.detail.GoodsDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.lease_shop.order.OrderListAcitivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.lease_shop.coupon.CouponListAcitivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.lease_shop.ShoppingCartActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|stateUnchanged" />
+        <activity
+            android:name=".ui.activity.me.AuthenticationSelectorActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.me.AuthenticationWorkerActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|stateUnchanged" />
+        <activity
+            android:name=".ui.activity.lease_shop.coupon.UseRecordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.lease_shop.order.OrderConfirmActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.lease_shop.order.PayActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.login.ForgetPasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.login.SetPasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.login.QuickLoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.me.AuthenticationDataActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|stateUnchanged" />
+        <activity android:name=".ui.activity.lease_shop.TestActivity" />
+        <activity
+            android:name=".alipay.PayDemoActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false" />
+        <activity
+            android:name=".alipay.H5PayDemoActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind" />
+        <!-- alipay sdk begin -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation|screenSize"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name="com.alipay.sdk.app.H5AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity android:name=".ui.LoadUrlActivity" />
+        <activity android:name=".ui.activity.lease_shop.order.OrderDetailActivity" />
+        <activity android:name=".ui.activity.me.MapActivity" />
+        <activity android:name=".ui.activity.lease_shop.order.MyWebView"></activity>
+    </application>
+
+</manifest>

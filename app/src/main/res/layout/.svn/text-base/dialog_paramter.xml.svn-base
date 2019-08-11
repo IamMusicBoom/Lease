@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+<LinearLayout
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <RelativeLayout
+        android:id="@+id/img_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:src="@mipmap/tou_ming">
+        </ImageView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:padding="@dimen/dp_20"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="120dp"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/img_title_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="IPHONE"
+                    android:textSize="@dimen/font_13"
+                    android:textColor="@color/black_222833"/>
+                <TextView
+                    android:id="@+id/img_title_num"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_5"
+                    android:layout_marginBottom="@dimen/dp_5"
+                    android:textSize="@dimen/font_10"
+                    android:textColor="@color/grey"/>
+                <TextView
+                    android:id="@+id/img_title_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="已选：“有线耳机；白色”"
+                    android:textSize="@dimen/font_10"
+                    android:textColor="@color/grey"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+        <ImageView
+            android:id="@+id/img_title"
+            android:layout_width="@dimen/dp_90"
+            android:layout_height="@dimen/dp_90"
+            android:layout_marginLeft="@dimen/dp_20"
+            android:src="@mipmap/i7_home"/>
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_10"
+        android:textSize="@dimen/font_11"
+        android:background="@color/white"
+        android:textColor="@color/gray_333333"
+        android:text="请选择产品规格"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/paramter_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="@dimen/dp_10"
+        android:orientation="vertical">
+
+    </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/detail_add_btn"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:clickable="true"
+                    android:onClick="onClick"
+                    android:layout_margin="@dimen/dp_15"
+                    android:background="@drawable/button_defaut_2"
+                    android:text="加入购物车"
+                    android:textColor="@color/color_title" />
+
+                <Button
+                    android:id="@+id/detail_buy_btn"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp_15"
+                    android:clickable="true"
+                    android:onClick="onClick"
+                    android:background="@drawable/button_defaut"
+                    android:text="马上预约"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+</layout>

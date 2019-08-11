@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.mcxtzhang.swipemenulib.SwipeMenuLayout
+            android:id="@+id/m_sml_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/phone_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                app:cardElevation="@dimen/dp_3"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/root_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="vertical"></LinearLayout>
+
+                    <LinearLayout
+                       android:id="@+id/item_order_id_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dp_5"
+                        android:layout_marginLeft="@dimen/dp_15"
+                        android:layout_marginRight="@dimen/dp_15"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:visibility="gone"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="订单编号："
+                            android:textColor="@color/color_999999"
+                            android:textSize="@dimen/font_11" />
+
+                        <TextView
+                            android:id="@+id/item_order_no"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_10"
+                            android:textColor="@color/color_999999"
+                            android:textSize="@dimen/font_11" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/item_order_crate_time_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/dp_5"
+                        android:layout_marginLeft="@dimen/dp_15"
+                        android:layout_marginRight="@dimen/dp_15"
+                        android:layout_marginTop="@dimen/dp_5"
+                        android:visibility="gone"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="创建时间："
+                            android:textColor="@color/color_999999"
+                            android:textSize="@dimen/font_11" />
+
+                        <TextView
+                            android:id="@+id/item_order_creat_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/dp_10"
+                            android:textColor="@color/color_999999"
+                            android:textSize="@dimen/font_11" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/item_bottom_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:orientation="horizontal"
+                        android:padding="@dimen/dp_5">
+
+                        <TextView
+                            android:id="@+id/gray_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/dp_15"
+                            android:background="@drawable/order_gray_bg"
+                            android:clickable="true"
+                            android:gravity="center"
+                            android:hint="查看详情"
+                            android:text="查看详情"
+                            android:textColor="@color/gray_color_press"
+                            android:textSize="@dimen/font_11" />
+
+                        <TextView
+                            android:id="@+id/red_btn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/order_red_bg"
+                            android:clickable="true"
+                            android:gravity="center"
+                            android:hint="确认收货"
+                            android:text="确认收货"
+                            android:textColor="@color/red_color_press"
+                            android:textSize="@dimen/font_11" />
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                android:id="@+id/order_list_delete"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@color/red_cc0115"
+                android:gravity="center"
+                android:padding="@dimen/dp_15"
+                android:text="删除"
+                android:textColor="@color/white" />
+        </com.mcxtzhang.swipemenulib.SwipeMenuLayout>
+    </LinearLayout>
+</layout>

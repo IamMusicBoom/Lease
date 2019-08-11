@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+
+    <color name="theme_color">#44444444</color>
+    <color name="white">#fff</color>
+    <color name="color_e7e5e5">#e7e5e5</color>
+    <color name="gray_474747">#474747</color>
+    <color name="color_8fffffff">#8fffffff</color>
+    <color name="white_click_4effffff">#4effffff</color>
+    <color name="black">#000000</color>
+
+    <color name="color_7d7d7d">#7d7d7d</color>
+    <color name="gray_f6f6f6">#f6f6f6</color>
+    <color name="gray_d6d6d6">#d6d6d6</color>
+    <color name="blue_unpress_3d9ce6">#3d9ce6</color>
+    <color name="color_999999">#999999</color>
+    <color name="color_title">#313131</color>
+    <color name="color_title_press">#90313131</color>
+    <color name="red_fe3824">#FE3824</color>
+    <color name="line_gray_dddddd">#dddddd</color>
+
+    <color name="gray_f3f3f3">#f3f3f3</color>
+    <color name="red_cb0115">#cb0115</color>
+    <color name="red_press_cb0115">#f8cb0115</color>
+    <color name="theme_bg">#f5f5f5</color>
+
+    <color name="grey_ededed">#ededed</color>
+    <color name="grey_ababab">#ababab</color>
+    <color name="grey_777777">#777777</color>
+    <color name="grey_bbbbbb">#bbbbbb</color>
+    <color name="grey_222833">#222833</color>
+    <color name="black_111111">#111111</color>
+
+
+    <color name="progress_tint_color">#fdcb33</color>
+    <color name="progress_background_tint">#e7e7e7</color>
+    <color name="secondary_progress_tint">#e7e7e7</color>
+
+
+    <color name="toast_touming">#262d33</color>
+
+</resources>

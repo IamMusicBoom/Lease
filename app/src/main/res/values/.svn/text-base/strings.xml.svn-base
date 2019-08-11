@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">悦享租</string>
+    <string name="loading">加载中...</string>
+    <string name="title_tv_left">左边</string>
+    <string name="title_tv_right">右边</string>
+    <string name="cancel">取消</string>
+    <string name="key_word">请输入关键字</string>
+    <string name="check_network">请检查网络</string>
+    <string name="home">Home</string>
+    <string name="first_fragment">第一个</string>
+    <string name="second_fragment">第二个</string>
+    <string name="third_fragment">第三个</string>
+    <string name="success">成功</string>
+    <string name="viewpager_indicator">%1$d/%2$d</string>
+    <string name="yzj">原租价</string>
+    <string name="xzj">现租价</string>
+    <string name="ysj">原售价</string>
+    <string name="xsj">现售价</string>
+    <string name="my">/月</string>
+    <string name="y">元</string>
+</resources>

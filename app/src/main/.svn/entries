@@ -1,0 +1,71 @@
+10
+
+dir
+1056
+svn://192.168.0.122/Lease/APP/Android/Lease/app/src/main
+svn://192.168.0.122/Lease
+
+
+
+2017-08-17T04:28:21.896804Z
+1050
+wma
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+e32f6f84-27a2-4b6c-9872-e2a00f578833
+
+AndroidManifest.xml
+file
+1139
+
+
+
+2017-08-31T08:02:14.528000Z
+315c5eb3b5d49f9391407e8c3a49c54f
+2017-08-31T08:16:11.016315Z
+1139
+wma
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+7537
+
+assets
+dir
+
+java
+dir
+
+res
+dir
+

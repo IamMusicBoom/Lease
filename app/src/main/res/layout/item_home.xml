@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<data>
+    <variable
+        name="model"
+        type="com.tylx.leasephone.model.GoodsModel"/>
+    <import type="com.tylx.leasephone.R"/>
+</data>
+
+    <LinearLayout
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+            </LinearLayout>
+        <android.support.v7.widget.CardView
+            android:id="@+id/phone_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:cardElevation="@dimen/dp_3"
+            app:cardUseCompatPadding="true">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="@dimen/dp_10"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="110dp"
+                    android:layout_height="120dp"
+                    android:layout_marginLeft="@dimen/dp_15"
+                    >
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity=""
+                    android:layout_marginLeft="5dp"
+                    android:orientation="vertical"
+                    >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@{model.name}"
+                        android:textColor="@color/black"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:textSize="@dimen/font_20" />
+                    <TextView
+                        android:id="@+id/style_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="@dimen/font_13" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="bottom"
+                        android:orientation="horizontal">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+                                <TextView
+                                    android:id="@+id/now_tip"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:gravity="bottom"
+                                    android:text=""
+                                    android:textColor="@color/black"
+                                    android:textSize="@dimen/font_10" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                            <TextView
+                                android:id="@+id/be_tip"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                 />
+                                <ImageView
+                                    android:id="@+id/line"
+                                    style="@style/horizontal_line"
+                                    android:layout_height="@dimen/dp_1"
+                                    android:background="@color/gray_cccccc"
+                                    android:layout_centerInParent="true"
+                                    android:layout_marginTop="-10dp"/>
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/go_add_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:paddingBottom="@dimen/dp_15"
+                            android:paddingRight="@dimen/dp_15"
+                            android:src="@mipmap/more" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+            </LinearLayout>
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginLeft="@dimen/dp_15"
+                android:src="@mipmap/nofile"
+                android:layout_marginTop="@dimen/dp_20"
+                android:background="@color/white"
+                app:loadImage="@{model.listPic}"
+                app:defaultImg="@{R.mipmap.nofile}"/>
+        </FrameLayout>
+    </LinearLayout>
+</layout>

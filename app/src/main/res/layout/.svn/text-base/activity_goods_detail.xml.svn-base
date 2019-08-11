@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="model"
+            type="com.tylx.leasephone.model.GoodsModel" />
+
+        <variable
+            name="detali"
+            type="com.tylx.leasephone.model.CommondityNormDetail" />
+
+        <import type="com.tylx.leasephone.R" />
+
+        <import type="android.view.View" />
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/nav_red_circle"
+            android:layout_width="@dimen/dp_15"
+            android:layout_height="@dimen/dp_15"
+            android:layout_alignParentRight="true"
+            android:layout_margin="@dimen/dp_5"
+            android:background="@drawable/red_circle"
+            android:elevation="8dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/dp_8"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical">
+            <!--Title 开始-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/status_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/statuabarheight"
+                    android:background="@color/theme_color"
+                    android:orientation="vertical"
+                    android:visibility="gone"></LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/layoutbar"
+                    style="@style/navbar_stylew">
+
+                    <ImageView
+                        android:id="@+id/nav_bar_back"
+                        style="@style/nav_bar_back_style"
+                        android:layout_centerVertical="true"
+                        android:clickable="true"
+                        android:onClick="onClick"
+                        android:src="@mipmap/back" />
+
+                    <TextView
+                        android:id="@+id/nav_bar_lefttext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignEnd="@+id/nav_bar_back"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="12dp"
+                        android:maxLines="1"
+                        android:paddingRight="5dp"
+                        android:text="@string/title_tv_left"
+                        android:textColor="@color/gray_474747"
+                        android:textSize="14sp"
+                        android:visibility="gone"
+                        tools:text="@string/title_tv_left"
+                        tools:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/nav_bar_title"
+                        style="@style/title_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dp_3"
+                        android:ellipsize="end"
+                        android:maxLength="30"
+                        android:maxLines="1"
+                        android:textColor="@color/white" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:id="@+id/nav_right_root"
+                            android:layout_width="@dimen/dp_50"
+                            android:layout_height="wrap_content">
+
+                            <ImageView
+                                android:id="@+id/nav_bar_right"
+                                android:layout_width="44dp"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:background="@drawable/selector_img"
+                                android:clickable="true"
+                                android:onClick="onClick"
+                                android:padding="8dp"
+                                android:scaleType="centerInside"
+                                android:src="@mipmap/cart"
+                                android:visibility="visible" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+            <!--Title 结尾-->
+            <ScrollView
+                android:id="@+id/scroll_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:scrollbars="none">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="220dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="220dp"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"
+                                    android:background="@mipmap/detail_bg"></LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0dp"
+                                    android:layout_weight="1"></LinearLayout>
+                            </LinearLayout>
+
+                            <android.support.v7.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/dp_15"
+                                android:layout_marginRight="@dimen/dp_15"
+                                android:clickable="true"
+                                android:focusable="true"
+                                android:foreground="?android:attr/selectableItemBackground"
+                                app:cardElevation="@dimen/dp_3"
+                                app:cardUseCompatPadding="true">
+
+                                <com.bigkoo.convenientbanner.ConvenientBanner
+                                    android:id="@+id/ad_banner"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/white"
+                                    app:canLoop="true"></com.bigkoo.convenientbanner.ConvenientBanner>
+                            </android.support.v7.widget.CardView>
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/dp_10"
+                            android:text="@{model.name}"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/font_17"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="@dimen/dp_10">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="bottom"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{model.businessType==1?R.string.xzj:R.string.xsj}"
+                                    android:textColor="@color/gray_232323"
+                                    android:textSize="@dimen/font_8" />
+
+                                <TextView
+                                    android:id="@+id/price_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="@dimen/dp_5"
+                                    android:layout_marginRight="@dimen/dp_5"
+                                    android:textColor="@color/red_cc0115"
+                                    android:textSize="@dimen/font_22"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@{model.businessType==1?R.string.my:R.string.y}"
+                                    android:textColor="@color/gray_232323"
+                                    android:textSize="@dimen/font_8" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/textView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="价值："
+                                    android:textColor="@color/gray_232323"
+                                    android:textSize="@dimen/font_8" />
+
+                                <TextView
+                                    android:id="@+id/tv_worth"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="@{detali.worth+`元`}"
+                                    android:textColor="@color/gray_232323"
+                                    android:textSize="@dimen/font_8" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/remrk_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/dp_10"
+                            android:hint=""
+                            android:textColor="@color/grey"
+                            android:textSize="@dimen/font_10" />
+
+                        <ImageView
+                            style="@style/horizontal_line"
+                            android:layout_marginLeft="@dimen/dp_10"
+                            android:layout_marginRight="@dimen/dp_10" />
+
+                        <LinearLayout
+                            android:id="@+id/detail_parameter"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/white_onclick_shape"
+                            android:clickable="true"
+                            android:onClick="onClick"
+                            android:padding="@dimen/dp_10">
+
+                            <TextView
+                                android:id="@+id/style_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:text="选择参数"
+                                android:textSize="@dimen/font_12" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@mipmap/right_img" />
+                        </LinearLayout>
+
+                        <ImageView
+                            style="@style/horizontal_line"
+                            android:layout_marginLeft="@dimen/dp_10"
+                            android:layout_marginRight="@dimen/dp_10" />
+
+                        <com.tylx.leasephone.view.TopToolView
+                            android:id="@+id/toptoolview"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:background="@color/white"></com.tylx.leasephone.view.TopToolView>
+
+                        <FrameLayout
+                            android:id="@+id/home_frameLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_weight="1" />
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/detail_add_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp_10"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_defaut_2"
+                    android:clickable="true"
+                    android:onClick="onClick"
+                    android:text="加入购物车"
+                    android:textColor="@color/color_title"
+                    android:visibility="@{model.businessType==1?View.GONE:View.VISIBLE}" />
+
+                <Button
+                    android:id="@+id/detail_buy_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp_10"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_defaut"
+                    android:clickable="true"
+                    android:onClick="onClick"
+                    android:text="@{model.businessType==1?`马上预约`:`立即购买`}"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

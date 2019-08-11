@@ -1,0 +1,18 @@
+<resources>>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/color_title</item>
+        <item name="colorPrimaryDark">@color/color_title</item>
+        <item name="colorAccent">@color/color_title</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+    <style name="AppTheme_Tranf" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/color_title</item>
+        <item name="colorAccent">@color/color_title</item>
+        <item name="colorPrimaryDark">#00000000</item>
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+</resources>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/progress_bar_bg"
+    android:padding="10dp"
+    android:layout_gravity="center">
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="预约成功"
+    android:textSize="18sp"
+    android:padding="@dimen/dp_5"
+    android:textColor="@color/white"
+    android:gravity="center"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/dp_5"
+        android:text="随后客服人员会与您联系，请保持电话畅通"
+        android:textColor="@color/white"
+        android:gravity="center"/>
+</LinearLayout>
